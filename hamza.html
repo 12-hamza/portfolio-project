@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: white;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: #084466;
+}
+
+.right {
+  right: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+</style>
+</head>
+<body>
+
+<div class="split left">
+  <div class="centered">
+    
+    <h2 style="color: rgb(247, 246, 246);"> Major Assignment</h2>
+    <p style="color: rgb(247, 240, 240);"> Frontend design of an application </p>
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+   
+
+    <h1 style="color: rgba(0, 0, 0, 0.863);">Enter details</h1>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" placeholder="username" id="username" name="username"><br></br>
+        
+        <label for="password">Password:</label>
+        <input type="password" placeholder="password" id="password" name="password"><br></br>
+        
+        <div class="logo">
+          <button  id="loginButton">Login</button><br></br>
+          <a href="main.html" alt="logo" ></a>
+        </div>
+        
+        
+        <button type="button "style="color:#08446;">Create your account</button><br></br><br></br><br></br>
+
+        <button id="loginButton">About</button>
+        <button id="loginButton">Contact Us</button>
+        <button id="loginButton">Details</button>
+
+    </form>
+
+    <script>
+        document.getElementById("loginButton").addEventListener("click", function(event) {
+            event.preventDefault(); 
+
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "hamza" && password === "12345") {
+              window.location.href = "main.html";
+                alert("Login successful");
+               
+
+                
+            } else {
+                alert("Login failed. Please check your username and password.");
+            }
+        });
+    </script>
+  </div>
+</div>
+     
+</body>
+</html> 
